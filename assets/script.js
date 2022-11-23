@@ -62,11 +62,12 @@ search.addEventListener('click', () => {
 
                   case 'Haze':
                     image.src = 'assets/images/mist.png';
-                    audio.src = 'assets/audios/mist.wav'
+                    audio.src = 'assets/audios/mist .wav'
                     break;
 
           default:
             image.src = '';
+            audio.src = '';
         }
 
         termperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
@@ -75,6 +76,8 @@ search.addEventListener('click', () => {
         wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
         weatherBox.classList.add('fadeIn')
         weatherDetails.classList.add('fadeIn')
+        weatherBox.style.display = 'block';
+        weatherDetails.style.display = 'flex';
 
         container.style.height = '590px';
 
