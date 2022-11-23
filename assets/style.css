@@ -199,7 +199,8 @@ body {
 @media(max-height:590px) {
   .container {
     overflow: scroll !important;
-    height: 90vh !important;
+    height: 75vh !important;
+    margin-top: 1rem;
   }
 }
 
