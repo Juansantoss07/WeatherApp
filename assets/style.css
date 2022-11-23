@@ -11,7 +11,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #06283D;
+  background-image: url('https://cdn.pixabay.com/photo/2018/07/09/16/59/clouds-3526558_960_720.jpg');
+  background-position: center;
+  background-size: cover;
 }
 
 .container {
@@ -19,7 +21,8 @@ body {
   width: 400px;
   height: 105px;
   padding: 28px 32px;
-  background: #fff;
+  background: rgba(26, 25, 25, 0.514);
+  backdrop-filter: blur(12px);
   overflow: hidden;
   border-radius: 18px;
   font-family: 'Roboto', sans-serif;
@@ -35,18 +38,19 @@ body {
 }
 
 .search-box input {
-  color: #06283D;
+  color: #fff;
   width: 80%;
   font-size: 24px;
   font-weight: 500;
   text-transform: uppercase;
   padding-left: 32px;
+  background-color: transparent;
 }
 
 .search-box input::placeholder {
   font-size: 20px;
   font-weight: 500;
-  color: #06283D;
+  color: #fff;
   text-transform: capitalize;
 }
 
@@ -54,7 +58,7 @@ body {
   cursor: pointer;
   width: 50px;
   height: 50px;
-  color: #06283D;
+  color: #000;
   background-color: #DFF6FF;
   border-radius: 50%;
   font-size: 22px;
@@ -63,12 +67,12 @@ body {
 
 .search-box button:hover {
   color: #fff;
-  background: #06283Ddc;
+  background: #002B6F;
 }
 
 .search-box i {
   position: absolute;
-  color: #06283Ddc;
+  color: #fff;
   font-size: 28px;
 }
 
@@ -83,7 +87,7 @@ body {
 
 .weather-box .temperature {
   position: relative;
-  color: #06283D;
+  color: #fff;
   font-size: 4rem;
   font-weight: 800;
   margin-top: 30px;
@@ -97,7 +101,7 @@ body {
 }
 
 .weather-box .description {
-  color: #06283Ddc;
+  color: #fff;
   font-size: 22px;
   font-weight: 500;
   text-transform: capitalize;
@@ -129,20 +133,20 @@ body {
 }
 
 .weather-details i {
-  color: #06283Ddc;
+  color: #fff;
   font-size: 26px;
   margin-right: 10px;
   margin-top: 6px;
 }
 
 .weather-details span {
-  color: #06283D;
+  color: #fff;
   font-size: 22px;
   font-weight: 500;
 }
 
 .weather-details p {
-  color: #06283Ddc;
+  color: #fff;
   font-size: 14px;
   font-weight: 500;
 }
@@ -161,7 +165,7 @@ body {
 }
 
 .not-found p {
-  color: #06283Ddc;
+  color: #fff;
   font-size: 22px;
   font-weight: 500;
   margin-top: 12px;
@@ -182,5 +186,38 @@ body {
   to {
     scale: 1;
     opacity: 1;
+  }
+}
+
+@media(max-width:430px) {
+  body {
+    padding: 1rem;
+  }
+}
+
+@media(max-height:590px) {
+  .container {
+    overflow: scroll !important;
+    height: 90vh !important;
+  }
+}
+
+@media(max-width:358px) {
+  .weather-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .humidity,
+  .wind {
+    justify-content: center;
+    padding: 0 !important;
+  }
+
+  .container {
+    overflow: scroll !important;
+    height: 90vh !important;
   }
 }
