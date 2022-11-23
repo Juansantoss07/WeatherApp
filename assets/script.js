@@ -32,6 +32,7 @@ search.addEventListener('click', () => {
         error404.style.display = 'none';
         error404.classList.remove('fadeIn');
 
+        const audio = document.querySelector('#audio')
         const image = document.querySelector('.weather-box img')
         const termperature = document.querySelector('.weather-box .temperature')
         const description = document.querySelector('.weather-box .description')
@@ -45,6 +46,7 @@ search.addEventListener('click', () => {
 
             case 'Rain':
               image.src = 'assets/images/rain.png';
+              audio.src = 'assets/audios/rain.wav'
               break;
 
               case 'Snow':
