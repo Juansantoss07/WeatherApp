@@ -52,14 +52,17 @@ search.addEventListener('click', () => {
 
               case 'Snow':
                 image.src = 'assets/images/snow.png';
+                audio.src = 'assets/audios/snow.wav'
                 break;
 
                 case 'Clouds':
                   image.src = 'assets/images/cloud.png';
+                  audio.src = 'assets/audios/clouds.wav'
                   break;
 
                   case 'Haze':
                     image.src = 'assets/images/mist.png';
+                    audio.src = 'assets/audios/mist.wav'
                     break;
 
           default:
